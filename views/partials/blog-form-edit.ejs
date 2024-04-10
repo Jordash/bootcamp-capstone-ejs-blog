@@ -1,0 +1,14 @@
+<div class="form-container">
+    <% let id = [locals.id] %>
+    <p>Update your blog post information below.</p>
+    <form action="/update/<%= id %>" method="POST">
+      <label for="title">Post Title</label>
+      <input type="text" name="title" id="title" class="form-control" value="<%= locals.title[id] %>" />
+      <label for="photo">Insert Image Path</label>
+      <input type="text" name="photo" id="photo" value="<%= locals.photo[id] %>" class="form-control" />
+      <label for="content">Post Body</label>
+      <textarea class="form-control" name="content" rows="10" cols="30" id="content"><%= locals.content[id] %></textarea>
+      <input class="btn btn-primary" type="submit" value="Update post" name="submit" />
+    </form>
+    </div>
+    

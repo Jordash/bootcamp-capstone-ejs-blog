@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs'); %>
+<h1>Blog Posts</h1>
+  <% 
+  let post_titles = []; 
+  let post_content = [];
+  let post_photo = [];
+
+  console.log('locals:: ' + locals.title.length );
+  
+  if (locals.title) {
+    post_titles.push(locals.title); %>
+    <div class="post-container">
+      <% for (let i=0; i < locals.title.length; i++) { %>
+      <div class="card">
+        <a href="/post/<%= i %>">
+          <h3><%= locals.title[i] %></h3>
+        <p class="date">
+          <em><%= locals.date[i] %></em>
+        </p>
+          <img class="" src="<%= locals.photo[i] %>" width="100%" height="auto" />
+        </a>
+      </div>
+    <% } %>
+    </div>
+  <% }
+  if (locals.title.length > 0) { %>
+    <p class="delete-all"><a class="btn btn-warning" href="/delete_all">Delete all posts</a></p>
+  <% }
+  if (locals.title.length === 0) { %>
+    <p class="no-posts error">You don't have any blog posts to show.</p>
+  <% } %>
+<%- include('partials/blog-form.ejs'); %>
+<%- include('partials/footer.ejs'); %>
+

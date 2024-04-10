@@ -1,0 +1,13 @@
+<p><a href="/">Home</a></p>
+<% let id = [locals.id] %>
+<section class="post-detail-container">
+    <h1><%= locals.title[id] %></h1>
+    <p><em>Posted: <%= locals.date[id] %></em></p>
+    <aside>
+        <img src="<%= locals.photo[id] %>" width="100%" height="auto" />
+    </aside>
+    <p class="post-body"><%= locals.content[id] %>
+    <p>
+        <a class="btn btn-primary" href="/edit/<%= id %>">Edit post</a> <a class="btn btn-warning" href="/delete/<%= id %>">Delete post</a>
+    </p>
+</section>

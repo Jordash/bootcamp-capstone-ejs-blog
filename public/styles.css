@@ -1,0 +1,95 @@
+body { height: 100vh; }
+main {
+  min-height: calc(100vh - 200px);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: rgba(150, 150, 150, 1);
+  position: relative;
+  bottom: 0;
+}
+header {
+  background:rgba(80, 80, 80, 1);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+}
+header p {
+  margin-bottom: 0;
+}
+input,
+label,
+textarea {
+  display: block;
+  margin: 0.5rem;
+}
+.form-container {
+  background-color: rgba(250, 250, 250, 1);
+  padding: 3rem;
+  margin: 2rem 0;
+}
+form {
+  
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* 
+*** Cards for posts
+*/
+.card {
+  margin: 1rem;
+  background-color: rgba(250, 250, 250, 1);
+  max-width: calc(100% / 5 - 2rem);
+  padding: 1rem;
+}
+.card:hover {
+  outline: 3px solid greenyellow;
+}
+.card a {
+  text-decoration: none;
+}
+.card h3 {
+  color: #000;
+}
+.card .date {
+  color: #666;
+  font-size: .9rem;
+}
+.card .photo {
+  object-fit: cover;
+}
+
+
+
+.no-posts {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.content {
+  padding: 3rem; }
+
+.post-detail-container {
+  max-width: 800px;
+  margin: 3rem auto;
+}
+.post-body {
+  margin: 1.5rem 0 3rem;
+  font-size: 1.3rem;
+}
+/*
+*** Buttons
+*/
+.delete-all {
+  text-align: center;
+  margin: 2rem auto;
+}
